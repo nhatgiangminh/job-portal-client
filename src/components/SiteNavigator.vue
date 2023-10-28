@@ -25,9 +25,33 @@
         <h3 class=" font-light">Contact Us</h3>
       </RouterLink>
     </nav>
+    <div class="avatar flex flex-1 justify-end relative">
+      <div class="rounded-full w-12 mr-8">
+        <img src="@/assets/img-01.webp" alt="avatar">
+      </div>
+      <div class="absolute w-15 flex flex-col bg-mainColor z-10 right-12 top-12 h-auto">
+        <div @click="logOutHandler" class="flex gap-4 w-full hover:bg-secondaryColor hover:text-white p-2 transition-all">
+          <i class="fa-solid fa-right-from-bracket text-lg"></i>
+          <span class="text-md font-light">Log out</span>
+        </div>
+        <div class="flex gap-4 w-full hover:bg-secondaryColor hover:text-white p-2 transition-all">
+          <i class="fa-solid fa-right-from-bracket text-lg"></i>
+          <span class="text-md font-light">Profile</span>
+        </div>
+      </div>
+    </div>
   </header>
 </template>
 <script setup>
-import { RouterLink } from 'vue-router';
+import { RouterLink, useRouter } from 'vue-router';
+import useAuthStore from '@/stores/auth.js';
+
+const authStore = useAuthStore()
+const router = useRouter()
+
+const logOutHandler = () => {
+  authStore.logOut()
+  router.push({ name: 'LoginView' })
+}
 
 </script>

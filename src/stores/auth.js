@@ -35,6 +35,11 @@ const authStore = defineStore('authStore', {
           toast.error(error.response.data.error)
         }
       }
+    },
+    logOut() {
+      localStorage.clear()
+      this.user = null
+      this.isAuth = false
     }
   }
 })
