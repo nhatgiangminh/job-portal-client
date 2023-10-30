@@ -1,5 +1,5 @@
 <template>
-  <header class="flex items-center w-full shadow-md text-black sticky bg-mainColor h-20 border-t-4 border-secondaryColor">
+  <header class="flex items-center w-full shadow-md text-black sticky top-0 bg-mainColor h-20 border-t-4 border-secondaryColor">
     <nav class=" w-3/12 flex justify-center">
       <RouterLink to="/">
         <h3 class="font-medium text-black text-xl">Jobs Agency</h3>

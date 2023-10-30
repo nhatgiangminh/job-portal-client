@@ -91,6 +91,11 @@
             <button type="submit" @click.prevent="formSubmitHandler" class="w-2/3 rounded-2xl font-bold h-full btn btn-accent mt-3">Register</button>
           </div>
         </form>
+        <div class="h-1/3 flex flex-col justify-end mt-8">
+          <RouterLink to="/login" class="hover:text-secondaryColor hover:cursor-pointer no-underline text-gray-500">
+            <i class="fa-solid fa-arrow-left"></i> Back to login
+          </RouterLink>
+        </div>
       </div>
     </div>
   </div>

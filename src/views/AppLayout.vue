@@ -1,6 +1,6 @@
 <template>
   <SiteNavigator />
-  <div class="container mx-auto">
+  <div class="mx-auto">
     <RouterView />
   </div>
 </template>

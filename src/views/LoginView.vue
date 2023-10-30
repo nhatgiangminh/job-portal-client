@@ -6,8 +6,8 @@
       <div class="hidden sm:flex w-full items-center">
         <img src="../assets/img-01.webp" alt="img">
       </div>
-      <div class="w-full flex flex-col text-black items-center justify-center">
-        <span class="text-2xl font-bold mb-6">Jobfeed Login</span>
+      <div class="w-full flex flex-col text-black items-center justify-end">
+        <span class=" text-2xl font-bold mb-6">Job Agency Login</span>
         <form class="w-full">
           <div class="flex flex-col w-full items-center">
             <!--Email input-->
@@ -43,6 +43,11 @@
             <button type="submit" @click.prevent="formSubmitHandler" class="w-2/3 rounded-2xl font-bold h-full btn btn-accent mt-3">Login</button>
           </div>
         </form>
+        <div class="h-1/3 flex flex-col justify-end mt-8">
+          <RouterLink to="/register" class="hover:text-secondaryColor hover:cursor-pointer no-underline text-gray-500">
+            Create your account <i class="fa-solid fa-arrow-right"></i>
+          </RouterLink>
+        </div>
       </div>
     </div>
   </div>
@@ -51,7 +56,7 @@
 import { computed, reactive } from 'vue';
 import { useVuelidate } from '@vuelidate/core'
 import { required, email } from '@vuelidate/validators'
-import { useRouter } from 'vue-router';
+import { useRouter, RouterLink } from 'vue-router';
 import { toast } from 'vue3-toastify'
 import useAuthStore from '@/stores/auth.js'
 
