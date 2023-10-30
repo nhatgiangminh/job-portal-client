@@ -4,6 +4,7 @@ const HomeView = () => import('@/views/HomeView.vue')
 const AppLayout = () => import('@/views/AppLayout.vue')
 const LoginView = () => import('@/views/LoginView.vue')
 const RegisterView = () => import('@/views/RegisterView.vue')
+const JobsView = () => import('@/views/JobsView.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,6 +21,11 @@ const router = createRouter({
           path: '',
           name: 'home',
           component: HomeView
+        },
+        {
+          path: 'jobs',
+          name: 'JobsView',
+          component: JobsView
         }
       ]
     },
